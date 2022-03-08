@@ -27,9 +27,11 @@ function SimpleResult(props) {
   });
   return (
     <div id={props.id} className={props.className} ref={props.ref}>
+      <div className="simprestab">
       <table>
         {results}
       </table>
+      </div>
     </div>
   );
 }

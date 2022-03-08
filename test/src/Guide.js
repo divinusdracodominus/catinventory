@@ -19,18 +19,18 @@ function Guide(props) {
         Features to implement
       </h3>
       <ul>
-        <li>Primary Navigate</li>
-	<li>Basic Search functionality</li>
 	<li>Advanced Search Functionality</li>
 	<li>Post request to add items to inventory</li>
-	<li>fetch request to dump table</li>
-	<li>Background image switcher</li>
       </ul>
       <h3>Currently Implemented Features</h3>
       <ul>
+	<li>Primary Navigation</li>
+	<li>Basic Search Functionality</li>
+	<li>Showing full inventory</li>
+	<li>Background Image Switcher</li>
         <li>Header Design</li>
-	<li>Search result layout</li>
-	<li>Data entry layout</li>
+	<li>Search Result Layout</li>
+	<li>Data Entry layout</li>
 	<li>Advanced search layout</li>
 	<li>Basic user guide</li>
       </ul> 

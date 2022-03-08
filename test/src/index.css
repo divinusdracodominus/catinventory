@@ -36,17 +36,58 @@ code {
   width: 100%;
   
 }
+
+#homebtns {
+    display: flex;
+}
+
+.homebtn{
+    width: 25%;
+    height: 50px;
+    color: white;
+    background-color: rgb(50,100,90);
+    border: 0px;
+}
+
+#catlogo{ display: none; }
+
+#mainview{
+  background-color: white;
+  width: 100%;
+  padding: 10px;
+}
 @media screen and (min-width: 600px) {
+  #homebtns{
+    width: 25%;
+    flex-direction: column;
+    float: left;
+  }
+  #home_content{
+    width: 75%;
+    float: left;
+  }
+  #catlogo{
+    display: block;
+  } 
+  .homebtn{
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  } 
   #mainview{
     width: 60%;
     margin-left: auto;
     margin-right: auto;
     display: flex;
     flex-direction: column;
-    background-color:white;
     padding-left: 5%; 
     padding-right: 5%;
     justify-content: center;
     height: 100%;
   }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .simprestab { overflow: scroll; }
 }

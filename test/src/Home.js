@@ -3,11 +3,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import FormInput from './Control';
 import AccountInput from './CreateAccount';
+import SimpleResult from './SimpleResult';
 
 function HomeMenu(props) {
   function add_item() {}
   function login() {}
   function create_account() {}
+  function dumptable() {
+    fetch("/testload.php").then(response => response.json()).then(data => {
+      //let result = <SimpleResult elements={data}/>;
+      ReactDOM.render(<SimpleResult elements={data}/>, document.getElementById('home_content'));
+    });
+  }
+  
   return (
     <div id={props.id} className={props.className} ref={props.ref}>
       <div id="homebtns">
@@ -15,11 +23,14 @@ function HomeMenu(props) {
         <button id="login" className="homebtn" onClick={login}>Login/Logout</button>
         <button id="create_account" className="homebtn" onClick={create_account}>
 	  Create Account
-        </button> 
+        </button>
+	<button id="dumptable" className="homebtn" onClick={dumptable}>
+         Show full inventory
+	</button>
       </div>
       <div id="home_content">
-        <FormInput title="Add Item"/>	
-	<AccountInput/>
+        <FormInput title="Add Item" className="maincontent"/>	
+	<AccountInput className="maincontent"/>
 	
       </div>
     </div> 

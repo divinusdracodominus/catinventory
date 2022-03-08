@@ -24,14 +24,14 @@ function Header(props) {
     let searchby = select.options[select.selectedIndex].value;
     console.log("simple searching by: " + searchby);
     let term = document.getElementById("search_term").value;
-    fetch("http://10.218.201.127/testload.php").then(response => response.json()).then(data => {
+    fetch("/testload.php").then(response => { console.log(response); return response.json()}).then(data => {
         data.forEach(d => {
           // I should use some fuzzy searching
           if(searchby == "id" && d.id == term){matches.push(d);}
 	  else if(searchby == "name" && d.name == term) { matches.push(d); }
 	  else if(d.location == term) { matches.push(d); }
 	});
-	console.log("matches: " + matches);
+	console.log("matches: " + JSON.stringify(matches));
     });
     
   } 
