@@ -19,7 +19,21 @@ function Header(props) {
     });
   }*/ 
   function nav_search() {
-
+    var matches = [];
+    let select = document.getElementById('search_method');
+    let searchby = select.options[select.selectedIndex].value;
+    console.log("simple searching by: " + searchby);
+    let term = document.getElementById("search_term").value;
+    fetch("http://10.218.201.127/testload.php").then(response => response.json()).then(data => {
+        data.forEach(d => {
+          // I should use some fuzzy searching
+          if(searchby == "id" && d.id == term){matches.push(d);}
+	  else if(searchby == "name" && d.name == term) { matches.push(d); }
+	  else if(d.location == term) { matches.push(d); }
+	});
+	console.log("matches: " + matches);
+    });
+    
   } 
   const elems = catagories.map(val => (
     <option id={val}>{val}</option> 
@@ -45,18 +59,18 @@ function Header(props) {
 	</div>
 	<h1>Computer Action Team Inventory</h1>
 	<div id="search_area">
-        <form method="get">
-	  <select name="search_method" className="">
+        
+	  <select id="search_method" name="search_method" className="">
             <option value="id">id</option>
 	    <option value="name">name</option>
     To borrow something find the item you would like to borrow, then 
 	    <option value="location">location</option>
 	  </select> 
 	  <input type="text" id="search_term" name="search_term"/>
-	  <button type="submit" onSubmit={nav_search}>
+	  <button type="button" onClick={nav_search}>
 	    <img src="./search.png" width="20px" height="20px"/>
 	  </button>
-	</form>
+	
 	</div>
       </div>
     );

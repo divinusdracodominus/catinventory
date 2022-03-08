@@ -10,7 +10,7 @@ function FormInput(props) {
   const borrower = props.incborrow == null ? null : <tr><td><label for="borrower"></label></td><td><input type="text" name="borrower"/></td></tr>
   return (
     <div className={props.className} id={props.id} ref={props.ref}>
-      <form>
+      <form method="post" action={props.action}>
       <h2>{title}</h2>
       <table>
         <tr>

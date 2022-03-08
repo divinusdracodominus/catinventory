@@ -34,7 +34,7 @@ code {
 #mainapp {
   height: 100%;
   width: 100%;
-  overflow: scroll;
+  
 }
 @media screen and (min-width: 600px) {
   #mainview{
