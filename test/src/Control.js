@@ -73,8 +73,8 @@ function FormInput(props) {
 	  <td><input type="number" name="quantity" id="quantity"/></td>
 	</tr>
 	<tr>
-          <td><label for="mincount">minimum quantity</label></td>
-	  <td><input type="number" id="mincount" name="mincount"/></td>
+          <td><label for="minquantity">minimum quantity</label></td>
+	  <td><input type="number" id="minquantity" name="minquantity"/></td>
 	</tr>
 	{borrower}
       </table>

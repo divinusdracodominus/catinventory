@@ -40,10 +40,11 @@ function App() {
     <div className="App" id="mainapp" ref={appRef}>
       <Header refs={refs}/>
       <div id="mainview">
-        <FormInput id="advsearch" className="maincontent" title="Advanced Search" ref={advsearch}/>
+        <FormInput id="advsearch" className="maincontent" title="Advanced Search" ref={advsearch} action="/additem.php"/>
         <SimpleResult className="maincontent" elements={elements}/>
 	<UserGuide id="guide" className="maincontent"/>
-        <HomeMenu id="homeview" className="maincontent"/>	
+        <HomeMenu id="homeview" className="maincontent"/>
+	<div id="resview" className="maincontent"/>
       </div>
     </div>
   );

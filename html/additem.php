@@ -14,11 +14,11 @@ $location = $_POST["location"];
 $dep = $_POST["department"];
 $purchase_date = $_POST["purchase_date"];
 $quantity = $_POST["quantity"];
-$$minquantity = $_POST["minquantity"];
+$minquantity = $_POST["minquantity"];
 
 $sql = "insert into inventory (name,catagory,location,department,purchase_date,quantity,minquantity) VALUES ('$name','$catagory', '$location','$dep','$purchase_date','$quantity','$minquantity')";
 if($conn->query($sql) === TRUE) {
-  echo "Ok";
+    header("Location: http://10.218.201.127:3000");
 }else{
   echo "Error: " . $conn->error;
 }

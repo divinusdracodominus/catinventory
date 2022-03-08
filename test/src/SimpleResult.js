@@ -12,6 +12,7 @@ function SimpleResult(props) {
   results.push(
     <tr><th>id</th><th>name</th><th>catagory</th><th>location</th><th>department</th><th>purchase date</th><th>quantity</th><th>minimum quantity</th></tr>
   );
+  console.log("simple result elements: " + JSON.stringify(props.elements));
   props.elements.forEach(elem => { results.push(
     <tr className="result_entry">
       <td>{elem.id}</td>

@@ -2,6 +2,7 @@ import set_focus from './scripts.js';
 import './Header.css';
 import React from 'react';
 import ReactDOM from "react-dom";
+import SimpleResult from './SimpleResult';
 let catagories = ["All", "Adapters", "Network Cards", "Graphics Cards", "Misc", "Power Adapters"];
 
 var history = [];
@@ -32,8 +33,9 @@ function Header(props) {
 	  else if(d.location == term) { matches.push(d); }
 	});
 	console.log("matches: " + JSON.stringify(matches));
+	set_focus("resview");
+        ReactDOM.render(<SimpleResult elements={matches}/>, document.getElementById("resview"));
     });
-    
   } 
   const elems = catagories.map(val => (
     <option id={val}>{val}</option> 

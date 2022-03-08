@@ -24,6 +24,8 @@ function Guide(props) {
       </ul>
       <h3>Currently Implemented Features</h3>
       <ul>
+	<li>Post request to add items to inventory</li>
+	<p>The server side code is implemented, the form input is implemented, there is just a bit of glue needed to make it visible/interactable that is not implemented</p>
 	<li>Primary Navigation</li>
 	<li>Basic Search Functionality</li>
 	<li>Showing full inventory</li>
