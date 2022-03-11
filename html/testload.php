@@ -1,4 +1,6 @@
 <?php
+// this file is reponsible for grabbing the contents
+// of the inventory table in order to display it to the UI
 $servername = "localhost";
 $username = "combscat";
 $password = "combspass2432";

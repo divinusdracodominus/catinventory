@@ -9,6 +9,7 @@ if($conn->connect_error) {
     die("connection failed: ". $conn->connect_error);
 }
 $name = $_POST["name"];
+// grab values from post fields (matching names on input fields)
 $catagory = $_POST["catagory"];
 $location = $_POST["location"];
 $dep = $_POST["department"];
@@ -18,6 +19,7 @@ $minquantity = $_POST["minquantity"];
 
 $sql = "insert into inventory (name,catagory,location,department,purchase_date,quantity,minquantity) VALUES ('$name','$catagory', '$location','$dep','$purchase_date','$quantity','$minquantity')";
 if($conn->query($sql) === TRUE) {
+    // if successful go back to frontend view
     header("Location: http://10.218.201.127:3000");
 }else{
   echo "Error: " . $conn->error;

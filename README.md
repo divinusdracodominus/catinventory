@@ -8,3 +8,6 @@ this directory contains the PHP code for the LAMP server running on port 80 and 
 
 # test
 This directory holds the primary frontend for the system, which is written in react and a small amount of vanilla javascript.
+
+### Please NOTE:
+If this repo is a little disorganized, and if some features are missing or half implemented, it is because over the course of ~43 hours I spent ~25 hours working on getting the UI functional in a water flow development style, as problematic as that is.
