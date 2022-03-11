@@ -3,7 +3,7 @@ The goal of this project was to create a basic UI to interact with a database us
 
 ## Primary directories
 
-# HHTML
+# HTML
 this directory contains the PHP code for the LAMP server running on port 80 and includes the code for interacting with the MySQL database that actually stores inventory items.
 
 # test
