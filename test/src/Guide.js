@@ -43,6 +43,7 @@ function Guide(props) {
         <li>Query CAS/LDAP to authenticate users</li>
 	<li>Allow anyone in MCECS to checkout items that will be marked as borrowable</li>
 	<li>Run a background daemon server side to automatically produce tickets</li>
+      <li>Room navigation map</li> 
       </ul>
     </div>
   );
