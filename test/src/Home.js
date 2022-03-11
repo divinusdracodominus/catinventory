@@ -1,3 +1,6 @@
+// this file contains the main home layout
+// in the home tab, and implements functionality 
+// for that respective tab
 import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -5,6 +8,8 @@ import FormInput from './Control';
 import AccountInput from './CreateAccount';
 import SimpleResult from './SimpleResult';
 
+
+// main react function
 function HomeMenu(props) {
   function add_item() {}
   function login() {}

@@ -1,3 +1,6 @@
+// the input for used to add items to database,
+// as well as the input formed used for advanced search feature
+// for when it is implemented
 import React from 'react';
 import ReactDOM from 'react-dom';
 let catagory_list = ["Adapters", "Speakers", "Monitors", "Misc"];

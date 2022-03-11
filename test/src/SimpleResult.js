@@ -1,4 +1,7 @@
+// this file is responsible for actually rendering
+// the table in which results are viewed
 import './index.css';
+
 function SimpleResult(props) {
   if(props.elements == null) {
     return (
@@ -13,6 +16,7 @@ function SimpleResult(props) {
     <tr><th>id</th><th>name</th><th>catagory</th><th>location</th><th>department</th><th>purchase date</th><th>quantity</th><th>minimum quantity</th></tr>
   );
   console.log("simple result elements: " + JSON.stringify(props.elements));
+  // itterates over every element in the resutls passed to the component as a propery, and formats it using table rows 
   props.elements.forEach(elem => { results.push(
     <tr className="result_entry">
       <td>{elem.id}</td>

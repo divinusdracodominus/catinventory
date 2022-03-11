@@ -1,3 +1,6 @@
+// this file is responsible for the main header
+// at the top of the page, and handles primary
+// navigation and simple search throughout the app
 import set_focus from './scripts.js';
 import './Header.css';
 import React from 'react';
@@ -9,16 +12,7 @@ var history = [];
 
 function Header(props) {
   const cat = React.useRef(null);
-  // this is only a planned feature, not implemented yet 
-  /*componentDidMount() {
-    super.componentDidMount();
-    this.backListener = browserHistory.listen(local => {
-      if(local.action === "POP") {
-        let last = history.pop();
-	redirect(last);
-      }
-    });
-  }*/ 
+  // as the name suggests, this handles simple search 
   function nav_search() {
     var matches = [];
     let select = document.getElementById('search_method');
@@ -41,6 +35,9 @@ function Header(props) {
     <option id={val}>{val}</option> 
   ));
   console.log("session variable: " + sessionStorage.getItem("active"));
+  // wrapper function around set_focus
+  // which is vanilla javascript for changing between
+  // components in the main view area 
   function set_home(refs) {
     set_focus("homeview");
   }

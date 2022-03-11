@@ -1,3 +1,6 @@
+// while I didn't get to it
+// this is responsible for providing more 
+// information on individual items
 import React from 'react';
 import ReactDOM from 'react-dom';
 

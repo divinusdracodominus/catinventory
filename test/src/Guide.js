@@ -1,3 +1,5 @@
+// responsible for the guide page, and will be responsible
+// for the how to contain and about sections when adde
 import React from 'react';
 import ReactDOM from 'react-dom';
 
